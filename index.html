@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EventMint AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="left-panel">
+      <h1>EventMint AI</h1>
+      <p class="subtitle">
+        Turn event participation into a collectible digital badge.
+      </p>
+
+      <div class="form-card">
+        <label for="participantName">Participant Name</label>
+        <input id="participantName" type="text" placeholder="Enter your name" />
+
+        <label for="eventName">Event Name</label>
+        <input id="eventName" type="text" placeholder="e.g. NFT NYC Side Event" />
+
+        <label for="role">Role</label>
+        <select id="role">
+          <option value="Attendee">Attendee</option>
+          <option value="Speaker">Speaker</option>
+          <option value="Builder">Builder</option>
+          <option value="Volunteer">Volunteer</option>
+        </select>
+
+        <label for="theme">Theme</label>
+        <select id="theme">
+          <option value="purple">Purple Glow</option>
+          <option value="blue">Blue Pulse</option>
+          <option value="green">Green Future</option>
+          <option value="gold">Golden VIP</option>
+        </select>
+
+        <div class="button-row">
+          <button id="generateBtn">Generate Badge</button>
+          <button id="downloadJsonBtn">Download JSON</button>
+          <button id="downloadPngBtn">Download PNG</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-panel">
+      <div id="badge" class="badge purple">
+        <div class="badge-top">
+          <span class="tag">COLLECTIBLE BADGE</span>
+          <span class="serial" id="serialText">#0001</span>
+        </div>
+
+        <div class="badge-content">
+          <h2 id="previewEvent">Your Event Name</h2>
+          <p class="role" id="previewRole">Attendee</p>
+          <p class="name" id="previewName">Your Name</p>
+        </div>
+
+        <div class="badge-footer">
+          <span>EventMint AI</span>
+          <span id="dateText">2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
